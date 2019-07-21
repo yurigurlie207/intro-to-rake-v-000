@@ -1,5 +1,4 @@
-require pry
-
+require 'pry'
 
 task :environment do
   require_relative './config/environment'
