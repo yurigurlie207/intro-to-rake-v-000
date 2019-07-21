@@ -1,4 +1,7 @@
 namespace :greeting do
+  task :environment do
+    require_relative './config/environment'
+  end
 
   desc 'outputs hello to the terminal'
   task :hello do
@@ -17,9 +20,6 @@ task console: :environment do
   Pry.start
 end
 
-task :environment do
-  require_relative './config/environment'
-end
 
 namespace :db do
   desc 'migrate changes to your database'
